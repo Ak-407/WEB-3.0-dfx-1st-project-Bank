@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "Bank": {
+      "main": "src/Bank/main.mo",
+      "type": "motoko"
+    },
+    "Bank_assets": {
+      "dependencies": [
+        "Bank"
+      ],
+      "frontend": {
+        "entrypoint": "src/Bank_assets/src/index.html"
+      },
+      "source": [
+        "src/Bank_assets/assets",
+        "dist/Bank_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8001",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
